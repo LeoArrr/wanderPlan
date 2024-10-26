@@ -4,7 +4,7 @@ Overview Template
    Objective: Introduce the app with a brief description and a clear call to action to start planning.
    Components:
    Hero Section: An appealing image or illustration of travel with a tagline (e.g., “Plan your trip effortlessly”).
-   Features Overview: Short descriptions and icons for the main app features (e.g., Itinerary planning, Map integration, Collaboration).
+   Features Overview: Short descriptions and icons for the main app features (e.g., Agenda planning, Map integration, Collaboration).
    Call to Action Button: “Get Started” or “Sign Up.”
 2. User Authentication Page
    Objective: Allow users to sign up, log in, and securely access their plans.
@@ -13,15 +13,15 @@ Overview Template
    Sign Up Form: Inputs for name, email, password, and confirmation.
    Social Login Options: If implementing, consider Google or Facebook login.
 3. Dashboard
-   Objective: Provide an overview of existing itineraries and offer the option to create a new itinerary.
+   Objective: Provide an overview of existing agendas and offer the option to create a new agenda.
    Components:
-   Itinerary Cards: List all the user’s itineraries with summary information and edit/delete options.
-   Create New Itinerary Button: Opens a form to start creating a new itinerary.
+   Agendas Cards: List all the user’s agendas with summary information and edit/delete options.
+   Create New Agenda Button: Opens a form to start creating a new agenda.
    Navigation Bar: Links to user profile, dashboard, and logout.
-4. Itinerary Creation Page
-   Objective: Provide an interface to create or edit itineraries.
+4. Agenda Creation Page
+   Objective: Provide an interface to create or edit agendas.
    Components:
-   Itinerary Details Form:
+   Agenda Details Form:
    Title, description, travel dates, and trip type.
    Activity Planner Section:
    Allow users to add activities for each day.
@@ -30,8 +30,8 @@ Overview Template
    Accommodation Details Section:
    Input for accommodation type, name, check-in/out dates, and address.
    Map Integration: Embed a map where users can mark and visualize activity/accommodation locations.
-5. Itinerary View Page
-   Objective: Display a completed itinerary in an organized, readable format.
+5. Agenda View Page
+   Objective: Display a completed agenda in an organized, readable format.
    Components:
    Overview Section:
    Display trip details, including dates, duration, and title.
@@ -44,8 +44,8 @@ Overview Template
 6. Collaboration and Sharing Feature
    Objective: Allow users to share their itineraries and collaborate with friends or family.
    Components:
-   Share Itinerary Button: Generates a shareable link or an invite system.
-   Collaborators List: Display a list of collaborators with permissions to edit or view the itinerary.
+   Share agenda Button: Generates a shareable link or an invite system.
+   Collaborators List: Display a list of collaborators with permissions to edit or view the agenda.
    Real-Time Updates: Sync changes made by collaborators in real-time using WebSocket or Firebase.
 7. Profile and Settings Page
    Objective: Allow users to manage their profile information and app settings.
@@ -65,7 +65,7 @@ Landing Page
 | [Sign Up] [Login] |
 |--------------------------------------------------|
 | Features Overview: |
-| - Itinerary Planning |
+| - Agenda Planning |
 | - Map Integration |
 | - Collaborative Planning |
 
@@ -79,9 +79,9 @@ Dashboard
 | -------------------------------------------------- | ---------------- | ------- |
 | Your Itineraries                                   |
 | -------------------------------------------------- |
-| [Create New Itinerary]                             |
+| [Create New Agenda]                             |
 | -------------------------------------------------- |
-| Itinerary Card 1                                   | Itinerary Card 2 |
+| Agenda Card 1                                   | Agenda Card 2 |
 | (Edit                                              | Delete) (Edit    | Delete) |
 
 ---
@@ -92,7 +92,7 @@ agenda Creation Page
 
 | NavBar: Dashboard                                  | Profile | Logout |
 | -------------------------------------------------- | ------- | ------ |
-| Itinerary Details: [Title][Description][Dates]     |
+| Agenda Details: [Title][Description][Dates]     |
 | -------------------------------------------------- |
 | Add Activities for Day 1:                          |
 | [Time][Name][Location][Add Note] [Add Activity]    |
@@ -129,10 +129,10 @@ agenda View Page
 1. Tech Stack Overview
    Frontend: React (JavaScript)
 
-Purpose: Building dynamic and interactive user interfaces, managing client-side routing, and displaying maps and itinerary information.
+Purpose: Building dynamic and interactive user interfaces, managing client-side routing, and displaying maps and Agenda information.
 Backend: Node.js with Express.js
 
-Purpose: To create server-side logic and handle API requests for user authentication, itinerary management, and data storage.
+Purpose: To create server-side logic and handle API requests for user authentication, Agenda management, and data storage.
 Database: MongoDB (NoSQL database)
 
 Purpose: Storing collections of users, itineraries, and other related travel data as JSON-like documents.
@@ -149,11 +149,11 @@ Frontend:
 React:
 
 Purpose: A popular JavaScript library for creating single-page applications (SPAs) with reusable components.
-Used For: Creating the main structure of the application (Login page, Itinerary Dashboard, Itinerary Form, etc.).
+Used For: Creating the main structure of the application (Login page, Agenda Dashboard, Agenda Form, etc.).
 React Router:
 
 Purpose: Library for routing and navigation between different pages in a React app.
-Used For: Managing navigation between the Login, Dashboard, and Itinerary pages.
+Used For: Managing navigation between the Login, Dashboard, and Agenda pages.
 Fetch API:
 
 Purpose: For making HTTP requests to the backend API to retrieve or update data.
@@ -170,7 +170,7 @@ Backend:
 Express.js:
 
 Purpose: A lightweight framework for creating RESTful API endpoints.
-Used For: Setting up routes for handling user registration, login, itinerary management, and itinerary sharing.
+Used For: Setting up routes for handling user registration, login, Agenda management, and Agenda sharing.
 Node.js:
 
 Purpose: JavaScript runtime for executing server-side logic.
@@ -192,7 +192,7 @@ MongoDB:
 Purpose: A NoSQL database to store collections as documents with flexible schemas.
 Used For:
 Users: To store user profiles, login information, and shared itineraries.
-Itineraries: To store itinerary details like destination, activities, and dates.
+Itineraries: To store Agenda details like destination, activities, and dates.
 Security:
 Environment Variables (.env file):
 
